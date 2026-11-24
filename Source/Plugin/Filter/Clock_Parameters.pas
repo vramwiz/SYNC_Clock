@@ -33,6 +33,11 @@ const
   COLOR_NAMES: array[0..2] of PWideChar = ('色1', '色2', '色3');
   GROUP_NAMES: array[0..6] of PWideChar = ('時計スタイル・描画モード', '色設定',
     '基準日時', '時間進行・カウントダウン', '時計固有の動作', 'ガラス設定', '音声');
+  // ホストに渡すスタイルの値と、メニューでの並び順を独立させる。
+  STYLE_MENU_ORDER: array[0..Ord(High(TClockStyle))] of TClockStyle = (
+    csRound, csSquare, csAntique, csModern, csAlarm, csPendulum, csCuckoo, csWatch,
+    csDigitalWatch, csPocket, csDigital12, csDigital24, csLED12, csLED24, csFlip,
+    csSkeleton, csStation, csTower, csStopwatch, csDigitalStopwatch, csHourglass, csBroadcast);
 
 procedure ApplyPreset(Edit: PEDIT_SECTION; Obj: OBJECT_HANDLE; Effect, Item: PWideChar); cdecl;
 var
@@ -87,6 +92,7 @@ end;
 procedure RegisterClockParameters;
 var
   I: Integer;
+  Style: TClockStyle;
   S: TClockSettings;
   procedure BeginGroup(Index: Integer);
   begin
@@ -109,10 +115,11 @@ var
   end;
 begin
   S := PresetSettings(csRound);
-  for I := 0 to Ord(High(TClockStyle)) do
+  for I := Low(STYLE_MENU_ORDER) to High(STYLE_MENU_ORDER) do
   begin
-    Styles[I].Name := CLOCK_STYLE_NAMES[TClockStyle(I)];
-    Styles[I].Value := I;
+    Style := STYLE_MENU_ORDER[I];
+    Styles[I].Name := CLOCK_STYLE_NAMES[Style];
+    Styles[I].Value := Ord(Style);
   end;
   for I := 0 to Ord(High(TClockMode)) do
   begin

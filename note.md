@@ -3,7 +3,7 @@
 ## 継承した共通基盤
 
 - `SYNC_WeatherFX` の `.dpr` / `.dproj`、リソース、SDK 型定義、フィルターテーブル登録処理、ライセンスを基に作成した。本体は `SYNC_Clock.dproj` / `SYNC_Clock.auf2` の1つ。製品 GUID は新規発行した。
-- `setup` はコピー元のフォルダー全体をコピーした。ファイル名、JSON、スクリプト、既存ZIPは WeatherFX のまま。時計演出の配布物を作る際は別途このフォルダーを更新する。
+- `setup` は WeatherFX の配布処理を継承し、時計演出の v1.0.0 用に更新した。バッチとカタログの使い方は [setup/README.md](setup/README.md) を参照。
 - 元からあった `git_init.bat` は保持した。制作仕様の原文は `docs/SPECIFICATION.md` に保存した。
 
 ## ビルド・配置

@@ -48,7 +48,7 @@ const
     '腕時計（アナログ）', '腕時計（デジタル）', '懐中時計',
     'デジタル時計（12時間制）', 'デジタル時計（24時間制）', 'LED時計（12時間制）',
     'LED時計（24時間制）', 'パタパタ時計', 'スケルトン時計（歯車付き）',
-    '駅時計', '時計塔', 'ストップウォッチ', '砂時計', '時報時計', 'ストップウォッチ（デジタル）');
+    '駅時計', '時計塔', 'ストップウォッチ（アナログ）', '砂時計', '時報時計', 'ストップウォッチ（デジタル）');
   CLOCK_MODE_NAMES: array[TClockMode] of PWideChar = ('時計全体', '文字盤', '時刻表示のみ');
   GLASS_MODE_NAMES: array[TGlassMode] of PWideChar = ('自動', 'ON', 'OFF');
   GLASS_SHAPE_NAMES: array[TGlassShape] of PWideChar = ('円', '四角', '角丸四角');

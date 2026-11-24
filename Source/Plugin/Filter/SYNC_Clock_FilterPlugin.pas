@@ -104,7 +104,7 @@ begin
   if not TableInitialized then
   begin
     SetupPluginTable(FILTER_FLAG_VIDEO or FILTER_FLAG_AUDIO or FILTER_FLAG_INPUT or
-      FILTER_FLAG_USERDATA, '時計演出', 'SYNC', '時計演出 / SYNC_Clock', ClockVideo, ClockAudio);
+      FILTER_FLAG_USERDATA, '時計演出', 'SYNC', '時計演出 / SYNC_Clock v1.0.0', ClockVideo, ClockAudio);
     RegisterClockParameters;
     GetPluginTable^.Func_Create := CreateClock;
     GetPluginTable^.Func_Destroy := DestroyClock;
