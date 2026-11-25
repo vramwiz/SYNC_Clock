@@ -54,11 +54,27 @@
                                           }
                                       ],
                           "uninstall":  [
-                                            {
-                                                "action":  "delete",
-                                                "path":  "{pluginsDir}/SYNC_Clock"
-                                            }
-                                        ]
+                              {
+                                  "action":  "delete",
+                                  "path":  "{pluginsDir}/SYNC_Clock/SYNC_Clock.auf2"
+                              },
+                              {
+                                  "action":  "delete",
+                                  "path":  "{pluginsDir}/SYNC_Clock/README.md"
+                              },
+                              {
+                                  "action":  "delete",
+                                  "path":  "{pluginsDir}/SYNC_Clock/LICENSE"
+                              },
+                              {
+                                  "action":  "delete",
+                                  "path":  "{pluginsDir}/SYNC_Clock/THIRD_PARTY_NOTICES.md"
+                              },
+                              {
+                                  "action":  "delete",
+                                  "path":  "{pluginsDir}/SYNC_Clock/ThirdParty/LICENSE.AviUtl2-SDK.txt"
+                              }
+                          ]
                       },
         "version":  [
                         {
