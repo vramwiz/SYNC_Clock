@@ -3,7 +3,7 @@
         "id":  "VRAMWIZ.SYNC_Clock",
         "name":  "時計演出",
         "type":  "フィルタプラグイン",
-        "summary":  "22種類の時計をタイムラインに合わせて描画。停止・早送り・逆行・カウントダウンに対応。",
+        "summary":  "22種類の時計を描画。早送り・逆行・カウントダウンに対応",
         "description":  "https://raw.githubusercontent.com/vramwiz/SYNC_Clock/refs/heads/main/README.md",
         "author":  "VRAMの魔術師",
         "repoURL":  "https://github.com/vramwiz/SYNC_Clock/",
